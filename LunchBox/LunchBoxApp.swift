@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct LunchBoxApp: App {
+    /// Shared instance of `OrderViewModel` for the app.
+        @StateObject private var orderViewModel = OrderViewModel()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(orderViewModel)
         }
     }
 }
