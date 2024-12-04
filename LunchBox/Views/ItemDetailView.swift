@@ -9,6 +9,9 @@ import SwiftUI
 
 /// View displaying detailed information about a menu item.
 struct ItemDetailView: View {
+    /// Dismissal action for the view.
+    @Environment(\.dismiss) var dismiss
+    
     /// The menu item being detailed.
     let item: MenuItem
     
@@ -81,5 +84,7 @@ struct ItemDetailView: View {
         for _ in 0..<quantity {
             orderViewModel.addItem(orderedItem)
         }
+        
+        dismiss()
     }
 }

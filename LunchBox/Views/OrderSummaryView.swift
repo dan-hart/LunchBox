@@ -62,6 +62,17 @@ struct OrderSummaryView: View {
                         .cornerRadius(10)
                 }
                 .disabled(orderViewModel.orderedItems.isEmpty)
+                
+                Button(action: orderViewModel.clearOrder) {
+                    Text("Clear Items")
+                        .font(.headline)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(orderViewModel.orderedItems.isEmpty ? Color.gray : Color.red)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .disabled(orderViewModel.orderedItems.isEmpty)
             }
             .padding()
         }

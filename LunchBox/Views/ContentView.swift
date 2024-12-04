@@ -35,7 +35,23 @@ struct ContentView: View {
                             showOrderSummary.toggle()
                         }
                     }) {
-                        Image(systemName: "cart")
+                        ZStack {
+                            Image(systemName: "cart")
+                            
+                            // Quantity badge
+                            if orderViewModel.orderedItems.count > 0 {
+                                Text("\(orderViewModel.orderedItems.count)")
+                                    .font(.caption)
+                                    .foregroundColor(.white)
+                                    .padding(5)
+                                    .background(Color.accentColor)
+                                    .clipShape(Circle())
+                                    .frame(width: 15, height: 15)
+                                    .offset(x: 5, y: -5)
+                                    .padding()
+
+                            }
+                        }
                     }
                 }
             }
