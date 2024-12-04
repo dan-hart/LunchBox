@@ -64,6 +64,13 @@ struct ContentView: View {
         .sheet(isPresented: $showOrderSummary) {
             OrderSummaryView()
         }
+        .alert("Order Placed", isPresented: $orderViewModel.showAlert) {
+            Button("OK") {
+                orderViewModel.clearOrder()
+            }
+        } message: {
+            Text("Enjoy your meal!")
+        }
     }
 
     /// Asynchronously loads menu items.

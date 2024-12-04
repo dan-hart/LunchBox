@@ -16,6 +16,9 @@ class OrderViewModel: ObservableObject {
     /// Total price of the current order.
     @Published var totalPrice: Double = 0.0
     
+    /// Show place order success or failure alert
+    @Published var showAlert: Bool = false
+    
     func fetchMenuItems() async -> [MenuItem] {
         #if DEBUG
         MenuItem.previewItems
@@ -45,5 +48,11 @@ class OrderViewModel: ObservableObject {
     func clearOrder() {
         orderedItems.removeAll()
         totalPrice = 0.0
+    }
+    
+    /// Places the current order and displays an alert.
+    func placeOrder() {
+        // TODO: Implement order placement logic
+        showAlert = true
     }
 }

@@ -52,7 +52,10 @@ struct OrderSummaryView: View {
             VStack {
                 Text("Total: $\(orderViewModel.totalPrice, specifier: "%.2f")")
                     .font(.title2)
-                Button(action: placeOrder) {
+                Button(action: {
+                    dismiss()
+                    orderViewModel.placeOrder()
+                }) {
                     Text("Place Order")
                         .font(.headline)
                         .frame(maxWidth: .infinity)
@@ -85,13 +88,5 @@ struct OrderSummaryView: View {
             let item = orderViewModel.orderedItems[index]
             orderViewModel.removeItem(item)
         }
-    }
-
-    /// Handles the order placement logic.
-    func placeOrder() {
-        // TODO: Logic for placing the order would go here.
-        
-        orderViewModel.clearOrder()
-        dismiss()
     }
 }

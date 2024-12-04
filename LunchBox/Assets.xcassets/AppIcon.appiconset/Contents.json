@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti.jpg",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -12,6 +13,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti 1.jpg",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -23,11 +25,72 @@
           "value" : "tinted"
         }
       ],
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti 2.jpg",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
     },
     {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-20@2x.png",
+      "idiom" : "iphone",
+      "scale" : "2x",
+      "size" : "20x20"
+    },
+    {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-20@3x.png",
+      "idiom" : "iphone",
+      "scale" : "3x",
+      "size" : "20x20"
+    },
+    {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-29.png",
+      "idiom" : "iphone",
+      "scale" : "1x",
+      "size" : "29x29"
+    },
+    {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-29@2x.png",
+      "idiom" : "iphone",
+      "scale" : "2x",
+      "size" : "29x29"
+    },
+    {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-29@3x.png",
+      "idiom" : "iphone",
+      "scale" : "3x",
+      "size" : "29x29"
+    },
+    {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-40@2x.png",
+      "idiom" : "iphone",
+      "scale" : "2x",
+      "size" : "40x40"
+    },
+    {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-40@3x.png",
+      "idiom" : "iphone",
+      "scale" : "3x",
+      "size" : "40x40"
+    },
+    {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-60@2x.png",
+      "idiom" : "iphone",
+      "scale" : "2x",
+      "size" : "60x60"
+    },
+    {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-60@3x.png",
+      "idiom" : "iphone",
+      "scale" : "3x",
+      "size" : "60x60"
+    },
+    {
+      "idiom" : "ios-marketing",
+      "scale" : "1x",
+      "size" : "1024x1024"
+    },
+    {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-16.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
@@ -38,6 +101,7 @@
       "size" : "16x16"
     },
     {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-32.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
@@ -48,6 +112,7 @@
       "size" : "32x32"
     },
     {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-128.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
@@ -58,6 +123,7 @@
       "size" : "128x128"
     },
     {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-256.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
@@ -68,6 +134,7 @@
       "size" : "256x256"
     },
     {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-512.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
@@ -76,6 +143,48 @@
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"
+    },
+    {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-20.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "size" : "20x20"
+    },
+    {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-40.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "size" : "40x40"
+    },
+    {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-64.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "size" : "64x64"
+    },
+    {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-76.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "size" : "76x76"
+    },
+    {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-76@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x",
+      "size" : "76x76"
+    },
+    {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-83.5@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x",
+      "size" : "83.5x83.5"
+    },
+    {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-1024.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "size" : "1024x1024"
     }
   ],
   "info" : {
