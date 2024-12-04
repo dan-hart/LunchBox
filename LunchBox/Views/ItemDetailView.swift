@@ -61,7 +61,6 @@ struct ItemDetailView: View {
             .padding()
         }
         .navigationTitle(item.name)
-        .navigationBarTitleDisplayMode(.inline)
     }
 
     /// Calculates the total price based on quantity and selected add-ons.
@@ -87,4 +86,8 @@ struct ItemDetailView: View {
         
         dismiss()
     }
+}
+
+#Preview {
+    ItemDetailView(item: MenuItem.previewBurger)
 }

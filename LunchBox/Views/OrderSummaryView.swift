@@ -36,16 +36,18 @@ struct OrderSummaryView: View {
             .navigationTitle("Your Order")
             .toolbar {
                 /// Close button to dismiss the order summary.
-                ToolbarItem(placement: .navigationBarLeading) {
+                ToolbarItem(placement: .cancellationAction) {
                     Button("Close") {
                         dismiss()
                     }
                 }
                 
                 /// Edit button to enable item deletion.
-                ToolbarItem(placement: .navigationBarTrailing) {
+                #if os(iOS)
+                ToolbarItem {
                     EditButton()
                 }
+                #endif
             }
             
             /// Total price and place order button.
@@ -89,4 +91,14 @@ struct OrderSummaryView: View {
             orderViewModel.removeItem(item)
         }
     }
+}
+
+#Preview {
+    @Previewable var orderViewModel = OrderViewModel()
+    
+    OrderSummaryView()
+        .environmentObject(orderViewModel)
+        .onAppear {
+            orderViewModel.addItem(MenuItem.previewTaco)
+        }
 }

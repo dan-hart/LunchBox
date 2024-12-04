@@ -34,3 +34,7 @@ struct MenuItemView: View {
         .accessibilityElement(children: .combine)
     }
 }
+
+#Preview {
+    MenuItemView(item: MenuItem.previewBurger)
+}

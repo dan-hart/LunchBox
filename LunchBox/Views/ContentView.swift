@@ -29,7 +29,7 @@ struct ContentView: View {
             .navigationTitle("LunchBox Menu")
             .toolbar {
                 /// Toolbar button to show the order summary.
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem {
                     Button(action: {
                         withAnimation {
                             showOrderSummary.toggle()
@@ -81,3 +81,7 @@ struct ContentView: View {
     }
 }
 
+#Preview {
+    ContentView()
+        .environmentObject(OrderViewModel())
+}
