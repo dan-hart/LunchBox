@@ -8,9 +8,9 @@
 import SwiftUI
 
 /// View displaying the summary of the user's order.
-struct OrderSummaryView: View {
+struct OrderSummaryView<ViewModel>: View where ViewModel: OrderViewModeling {
     /// Access to the shared `OrderViewModel`.
-    @EnvironmentObject var orderViewModel: OrderViewModel
+    @EnvironmentObject var orderViewModel: ViewModel
     
     /// Environment dismiss action to close the view.
     @Environment(\.dismiss) var dismiss
@@ -97,11 +97,6 @@ struct OrderSummaryView: View {
 }
 
 #Preview {
-    @Previewable var orderViewModel = OrderViewModel()
-    
-    OrderSummaryView()
-        .environmentObject(orderViewModel)
-        .onAppear {
-            orderViewModel.addItem(MenuItem.previewTaco)
-        }
+    OrderSummaryView<MockOrderViewModel>()
+        .environmentObject(MockOrderViewModel())
 }

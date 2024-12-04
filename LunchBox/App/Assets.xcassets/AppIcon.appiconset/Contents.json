@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti.jpg",
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-1024.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -13,7 +13,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti 1.jpg",
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-1024 1.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -25,7 +25,7 @@
           "value" : "tinted"
         }
       ],
-      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti 2.jpg",
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-1024 2.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -85,6 +85,7 @@
       "size" : "60x60"
     },
     {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-1024 3.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
@@ -140,51 +141,10 @@
       "size" : "512x512"
     },
     {
+      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-1024 5.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"
-    },
-    {
-      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-20.png",
-      "idiom" : "universal",
-      "scale" : "1x",
-      "size" : "20x20"
-    },
-    {
-      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-40.png",
-      "idiom" : "universal",
-      "scale" : "1x",
-      "size" : "40x40"
-    },
-    {
-      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-64.png",
-      "idiom" : "universal",
-      "scale" : "1x",
-      "size" : "64x64"
-    },
-    {
-      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-76.png",
-      "idiom" : "universal",
-      "scale" : "1x",
-      "size" : "76x76"
-    },
-    {
-      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-76@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x",
-      "size" : "76x76"
-    },
-    {
-      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-83.5@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x",
-      "size" : "83.5x83.5"
-    },
-    {
-      "filename" : "Gemini_Generated_Image_mptiaimptiaimpti-1024.png",
-      "idiom" : "universal",
-      "scale" : "1x",
-      "size" : "1024x1024"
     }
   ],
   "info" : {

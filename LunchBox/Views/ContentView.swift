@@ -8,9 +8,9 @@
 import SwiftUI
 
 /// The main view displaying the menu of lunch items.
-struct ContentView: View {
+struct ContentView<ViewModel>: View where ViewModel: OrderViewModeling {
     /// Access to the shared `OrderViewModel`.
-    @EnvironmentObject var orderViewModel: OrderViewModel
+    @EnvironmentObject var orderViewModel: ViewModel
     
     /// List of available menu items.
     @State private var menuItems: [MenuItem] = []
@@ -22,7 +22,7 @@ struct ContentView: View {
         NavigationStack {
             /// Displays the list of menu items.
             List(menuItems) { item in
-                NavigationLink(destination: ItemDetailView(item: item)) {
+                NavigationLink(destination: ItemDetailView<ViewModel>(item: item)) {
                     MenuItemView(item: item)
                 }
             }
@@ -62,7 +62,7 @@ struct ContentView: View {
         }
         /// Presents the order summary as a sheet.
         .sheet(isPresented: $showOrderSummary) {
-            OrderSummaryView()
+            OrderSummaryView<ViewModel>()
         }
         .alert("Order Placed", isPresented: $orderViewModel.showAlert) {
             Button("OK") {
@@ -82,6 +82,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
-        .environmentObject(OrderViewModel())
+    ContentView<MockOrderViewModel>()
+        .environmentObject(MockOrderViewModel())
 }

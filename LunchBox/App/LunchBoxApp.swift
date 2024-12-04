@@ -14,7 +14,7 @@ struct LunchBoxApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView<OrderViewModel>()
                 .environmentObject(orderViewModel)
         }
     }

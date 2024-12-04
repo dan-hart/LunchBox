@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "4BC285B8-69DD-4E91-801B-A0D41D2C499E",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:LunchBox.xcodeproj",
+      "identifier" : "52A000302D00B2D800FB707E",
+      "name" : "LunchBox"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:LunchBox.xcodeproj",
+        "identifier" : "52A000412D00B2DA00FB707E",
+        "name" : "LunchBoxTests"
+      }
+    }
+  ],
+  "version" : 1
+}

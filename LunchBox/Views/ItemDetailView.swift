@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// View displaying detailed information about a menu item.
-struct ItemDetailView: View {
+struct ItemDetailView<ViewModel>: View where ViewModel: OrderViewModeling {
     /// Dismissal action for the view.
     @Environment(\.dismiss) var dismiss
     
@@ -16,7 +16,7 @@ struct ItemDetailView: View {
     let item: MenuItem
     
     /// Access to the shared `OrderViewModel`.
-    @EnvironmentObject var orderViewModel: OrderViewModel
+    @EnvironmentObject var orderViewModel: ViewModel
     
     /// Quantity of the item to order.
     @State private var quantity: Int = 1
@@ -89,5 +89,6 @@ struct ItemDetailView: View {
 }
 
 #Preview {
-    ItemDetailView(item: MenuItem.previewBurger)
+    ItemDetailView<MockOrderViewModel>(item: MenuItem.previewBurger)
+        .environmentObject(MockOrderViewModel())
 }

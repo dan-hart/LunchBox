@@ -7,9 +7,21 @@
 
 import SwiftUI
 
-/// ViewModel managing the user's current order.
 @MainActor
-class OrderViewModel: ObservableObject {
+protocol OrderViewModeling: ObservableObject {
+    var orderedItems: [MenuItem] { get }
+    var totalPrice: Double { get }
+    var showAlert: Bool { get set }
+    
+    func fetchMenuItems() async -> [MenuItem]
+    func addItem(_ item: MenuItem)
+    func removeItem(_ item: MenuItem)
+    func clearOrder()
+    func placeOrder()
+}
+
+/// ViewModel managing the user's current order.
+class OrderViewModel: OrderViewModeling {
     /// List of items added to the order.
     @Published var orderedItems: [MenuItem] = []
     
@@ -20,12 +32,8 @@ class OrderViewModel: ObservableObject {
     @Published var showAlert: Bool = false
     
     func fetchMenuItems() async -> [MenuItem] {
-        #if DEBUG
-        MenuItem.previewItems
-        #else
         // TODO: Fetch menu items from a remote server
-        []
-        #endif
+        MenuItem.previewItems
     }
 
     /// Adds an item to the order and updates the total price.
@@ -56,3 +64,39 @@ class OrderViewModel: ObservableObject {
         showAlert = true
     }
 }
+
+#if DEBUG
+class MockOrderViewModel: OrderViewModeling {
+    let orderedItems: [MenuItem] = [
+        MenuItem.previewTaco,
+        MenuItem.previewPizza,
+        MenuItem.previewBurger,
+    ]
+    
+    var totalPrice: Double {
+        orderedItems.reduce(0.0) { $0 + $1.price }
+    }
+    
+    var showAlert: Bool = false
+    
+    func fetchMenuItems() async -> [MenuItem] {
+        MenuItem.previewItems
+    }
+    
+    func addItem(_ item: MenuItem) {
+        // No-op
+    }
+    
+    func removeItem(_ item: MenuItem) {
+        // No-op
+    }
+    
+    func clearOrder() {
+        // No-op
+    }
+    
+    func placeOrder() {
+        // No-op
+    }
+}
+#endif
