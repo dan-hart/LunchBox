@@ -32,6 +32,8 @@ extension MenuItem {
             previewBurger,
             previewSalad,
             previewPizza,
+            previewSushi,
+            previewTaco,
         ]
     }
     
@@ -59,6 +61,24 @@ extension MenuItem {
             description: "A classic pizza with pepperoni and mozzarella cheese.",
             price: 10.99,
             emoji: "🍕"
+        )
+    }
+    
+    static var previewSushi: MenuItem {
+        MenuItem(
+            name: "Sushi Roll",
+            description: "A sushi roll with salmon, avocado, and cucumber.",
+            price: 1,
+            emoji: "🍣"
+        )
+    }
+     
+    static var previewTaco: MenuItem {
+        MenuItem(
+            name: "Taco",
+            description: "A taco with seasoned beef, lettuce, and cheese.",
+            price: 2,
+            emoji: "🌮"
         )
     }
 }
