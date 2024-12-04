@@ -33,6 +33,9 @@ struct OrderSummaryView: View {
                 }
                 .onDelete(perform: deleteItems)
             }
+            #if os(macOS)
+            .frame(minHeight: 100)
+            #endif
             .navigationTitle("Your Order")
             .toolbar {
                 /// Close button to dismiss the order summary.
