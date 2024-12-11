@@ -8,7 +8,7 @@
 import Foundation
 
 /// Represents a menu item in the LunchBox app.
-struct MenuItem: Identifiable, Codable {
+struct MenuItem: Identifiable, Codable, Equatable {
     /// Unique identifier for the menu item.
     var id = UUID()
     
@@ -23,6 +23,14 @@ struct MenuItem: Identifiable, Codable {
     
     /// Emoji representation of the menu item.
     let emoji: String
+    
+    // MARK: - Equatable
+    static func == (lhs: MenuItem, rhs: MenuItem) -> Bool {
+        lhs.name.lowercased() == rhs.name.lowercased()
+        && lhs.description.lowercased() == rhs.description.lowercased()
+        && lhs.price == rhs.price
+        && lhs.emoji == rhs.emoji
+    }
 }
 
 #if DEBUG

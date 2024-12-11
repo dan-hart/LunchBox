@@ -55,6 +55,7 @@ struct ItemDetailView<ViewModel>: View where ViewModel: OrderViewModeling {
                         .background(Color.accentColor)
                         .foregroundColor(.white)
                         .cornerRadius(10)
+                        .accessibilityIdentifier("price")
                 }
                 .padding(.vertical)
             }

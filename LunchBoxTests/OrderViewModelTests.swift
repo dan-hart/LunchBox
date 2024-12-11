@@ -11,6 +11,57 @@ import Testing
 @MainActor
 struct OrderViewModelTests {
     // MARK: - Test non-mock class
+    @Test func addItemCheck() {
+        // Given
+        let viewModel = OrderViewModel()
+        
+        // When
+        viewModel.addItem(MenuItem.previewTaco)
+        
+        // Then
+        #expect(viewModel.orderedItems.count == 1)
+    }
+    
+    @Test func removeItemCheck() {
+        // Given
+        let viewModel = OrderViewModel()
+        
+        // When
+        viewModel.addItem(MenuItem.previewTaco)
+        viewModel.removeItem(MenuItem.previewTaco)
+        
+        // Then
+        #expect(viewModel.orderedItems.isEmpty)
+    }
+    
+    @Test func clearOrderCheck() {
+        // Given
+        let viewModel = OrderViewModel()
+        
+        // When
+        viewModel.addItem(MenuItem.previewTaco)
+        viewModel.addItem(MenuItem.previewBurger)
+        viewModel.clearOrder()
+        
+        // Then
+        #expect(viewModel.orderedItems.isEmpty)
+    }
+    
+    @Test func placeOrderCheck() {
+        // Given
+        let viewModel = OrderViewModel()
+        
+        // When
+        viewModel.addItem(MenuItem.previewTaco)
+        viewModel.addItem(MenuItem.previewBurger)
+        viewModel.placeOrder()
+        
+        // Then
+        #expect(viewModel.orderedItems.isEmpty)
+        #expect(viewModel.totalPrice == 0.0)
+        #expect(viewModel.showAlert)
+    }
+    
     @Test func totalPriceCheck() {
         // Given
         let viewModel = OrderViewModel()
@@ -24,6 +75,61 @@ struct OrderViewModelTests {
     }
     
     // MARK: - Test using Mocks
+    @Test func mockAddItemCheck() {
+        // Given
+        let viewModel = MockOrderViewModel()
+        viewModel.clearOrder()
+        
+        // When
+        viewModel.addItem(MenuItem.previewTaco)
+        
+        // Then
+        #expect(viewModel.orderedItems.count == 1)
+    }
+    
+    @Test func mockRemoveItemCheck() {
+        // Given
+        let viewModel = MockOrderViewModel()
+        viewModel.clearOrder()
+        
+        // When
+        viewModel.addItem(MenuItem.previewTaco)
+        viewModel.removeItem(MenuItem.previewTaco)
+        
+        // Then
+        #expect(viewModel.orderedItems.isEmpty)
+    }
+    
+    @Test func mockClearOrderCheck() {
+        // Given
+        let viewModel = MockOrderViewModel()
+        viewModel.clearOrder()
+        
+        // When
+        viewModel.addItem(MenuItem.previewTaco)
+        viewModel.addItem(MenuItem.previewBurger)
+        viewModel.clearOrder()
+        
+        // Then
+        #expect(viewModel.orderedItems.isEmpty)
+    }
+    
+    @Test func mockPlaceOrderCheck() {
+        // Given
+        let viewModel = MockOrderViewModel()
+        viewModel.clearOrder()
+        
+        // When
+        viewModel.addItem(MenuItem.previewTaco)
+        viewModel.addItem(MenuItem.previewBurger)
+        viewModel.placeOrder()
+        
+        // Then
+        #expect(viewModel.orderedItems.isEmpty)
+        #expect(viewModel.totalPrice == 0.0)
+        #expect(viewModel.showAlert)
+    }
+    
     @Test func mockFetchMenuItems() async {
         // Given
         let viewModel = MockOrderViewModel()

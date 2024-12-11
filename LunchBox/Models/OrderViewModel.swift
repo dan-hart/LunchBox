@@ -46,7 +46,7 @@ class OrderViewModel: OrderViewModeling {
     /// Removes an item from the order and updates the total price.
     /// - Parameter item: The `MenuItem` to remove.
     func removeItem(_ item: MenuItem) {
-        if let index = orderedItems.firstIndex(where: { $0.id == item.id }) {
+        if let index = orderedItems.firstIndex(where: { $0 == item }) {
             orderedItems.remove(at: index)
             totalPrice -= item.price
         }
@@ -60,6 +60,7 @@ class OrderViewModel: OrderViewModeling {
     
     /// Places the current order and displays an alert.
     func placeOrder() {
+        clearOrder()
         // TODO: Implement order placement logic
         showAlert = true
     }
@@ -67,7 +68,7 @@ class OrderViewModel: OrderViewModeling {
 
 #if DEBUG
 class MockOrderViewModel: OrderViewModeling {
-    let orderedItems: [MenuItem] = [
+    var orderedItems: [MenuItem] = [
         MenuItem.previewTaco,
         MenuItem.previewPizza,
         MenuItem.previewBurger,
@@ -84,19 +85,21 @@ class MockOrderViewModel: OrderViewModeling {
     }
     
     func addItem(_ item: MenuItem) {
-        // No-op
+        orderedItems.append(item)
     }
     
     func removeItem(_ item: MenuItem) {
-        // No-op
+        orderedItems.removeAll { $0 == item }
     }
     
     func clearOrder() {
-        // No-op
+        orderedItems.removeAll()
     }
     
     func placeOrder() {
-        // No-op
+        clearOrder()
+        
+        showAlert = true
     }
 }
 #endif

@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		521894082D09FEE200CD821F /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 521894072D09FEE200CD821F /* ViewInspector */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		52A000432D00B2DA00FB707E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -47,18 +51,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521894082D09FEE200CD821F /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521894062D09FEE200CD821F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		52A000282D00B2D800FB707E = {
 			isa = PBXGroup;
 			children = (
 				52A0008B2D00DCC200FB707E /* LunchBox.xctestplan */,
 				52A000332D00B2D800FB707E /* LunchBox */,
 				52A000452D00B2DA00FB707E /* LunchBoxTests */,
+				521894062D09FEE200CD821F /* Frameworks */,
 				52A000322D00B2D800FB707E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,6 +128,7 @@
 			);
 			name = LunchBoxTests;
 			packageProductDependencies = (
+				521894072D09FEE200CD821F /* ViewInspector */,
 			);
 			productName = LunchBoxTests;
 			productReference = 52A000422D00B2DA00FB707E /* LunchBoxTests.xctest */;
@@ -148,6 +162,9 @@
 			);
 			mainGroup = 52A000282D00B2D800FB707E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				521894002D09FD9F00CD821F /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 52A000322D00B2D800FB707E /* Products */;
 			projectDirPath = "";
@@ -469,6 +486,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		521894002D09FD9F00CD821F /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		521894072D09FEE200CD821F /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 521894002D09FD9F00CD821F /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52A000292D00B2D800FB707E /* Project object */;
 }
